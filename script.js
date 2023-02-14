@@ -1,14 +1,43 @@
-//your code here
-function func(){
-	
-	const x = Math.floor(Math.random()*40)-20;
-	// const x = 10;
-	document.getElementById("num").innerText = x;
-	if(document.getElementById("guess").value ==x){
-		document.getElementById("respond").innerText = "Hot";
-	}else {
-		document.getElementById("respond").innerText = "Cold";
+var randomNum;
+var input;
+function randomNumGenerator(){
+	randomNum = Math.floor(Math.random()*41) - 20;
+	document.getElementById("num").innerHTML = randomNum;
+	guessName();
+	print();
+}
+function guessName() {
+	input = parseInt(document.getElementById("guess").value);	
+}
+function print(){
+	if(Math.abs(randomNum - input) <= 5){
+		document.getElementById("respond").innerHTML = "Hot";
+	}
+	else{
+		document.getElementById("respond").innerHTML = "Cold";
 	}
 }
+//your code here
+var randomNum;
+var input;
+function randomNumGenerator(){
+	randomNum = Math.floor(Math.random()*41) - 20;
+	document.getElementById("num").innerHTML = randomNum;
+	guessName();
+	print();
+}
+function guessName() {
+	input = parseInt(document.getElementById("guess").value);	
+}
+function print(){
+	if(Math.abs(randomNum - input) <= 5){
+		document.getElementById("respond").innerHTML = "Hot";
+	}
+	else{
+		document.getElementById("respond").innerHTML = "Cold";
+	}
+}
+
+
 
 
